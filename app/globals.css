@@ -1,28 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Theme Colors */
+  --primary: #5b3eff;
+  --secondary: #ff5e7e;
+  --accent: #2ee6a6;
+  --background: #0f1226;
+  --surface: #1a1f3a;
+  --text-primary: #e6e9ff;
+  --text-secondary: #9aa3c7;
+  --border: #2a2f55;
+
+  /* Role Colors */
+  --role-admin: #ff5e7e;
+  --role-member: #5b3eff;
+  --role-volunteer: #2ee6a6;
+
+  /* Task Status Colors */
+  --status-pending: #ffa726;
+  --status-done: #2ee6a6;
+  --status-closed: #9aa3c7;
+
+  /* Attendance Status Colors */
+  --attendance-not-marked: #9aa3c7;
+  --attendance-present: #2ee6a6;
 }
 
 @theme inline {
+  /* Core Colors */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+
+  /* Role Colors */
+  --color-role-admin: var(--role-admin);
+  --color-role-member: var(--role-member);
+  --color-role-volunteer: var(--role-volunteer);
+
+  /* Status Colors */
+  --color-status-pending: var(--status-pending);
+  --color-status-done: var(--status-done);
+  --color-status-closed: var(--status-closed);
+
+  /* Attendance Colors */
+  --color-attendance-not-marked: var(--attendance-not-marked);
+  --color-attendance-present: var(--attendance-present);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Gradients */
+.gradient-event-card {
+  background: linear-gradient(135deg, #5b3eff, #ff5e7e);
 }
 
+/* Base Styles */
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
