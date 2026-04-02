@@ -125,7 +125,7 @@ export default function Register() {
               onChange={(e) => setRole(e.target.value)}
               options={[
                 { value: "MEMBER", label: "Member" },
-                { value: "ADMIN", label: "Admin" },
+                // { value: "ADMIN", label: "Admin" },
                 { value: "VOLUNTEER", label: "Volunteer" },
               ]}
             />
